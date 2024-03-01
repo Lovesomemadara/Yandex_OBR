@@ -1,10 +1,12 @@
 report: list[str] = []
-while line := input():
-    comm: int = line.find(' # ')
-    if line.startswith('#'):
-        continue
+tag = '#'
 
-    line: str = line[:comm]
-    report.append(line)
+while line := input():
+    if tag in line:
+        line = line[:line.find(tag)]
+    line = line.rstrip()
+
+    if line:
+        report.append(line)
 
 print('\n'.join(report))

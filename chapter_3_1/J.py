@@ -1,7 +1,7 @@
 count = [0] * 33
+
 max_char = ''
 max_count = 0
-
 while (line := input()) != 'ФИНИШ':
     for char in line:
         if char.isalpha():
