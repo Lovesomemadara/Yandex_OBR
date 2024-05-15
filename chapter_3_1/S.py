@@ -8,7 +8,11 @@ for i in input().split(' '):
         elif i == '*':
             a, b = stack.pop(), stack.pop()
             stack.append(b * a)
+        # TODO: знаки операций +, -, *
     else:
         stack.append(int(i))
 
-print(stack[0])
+first, *_ = stack
+# print(others) []
+print(first)
+# print(*stack)

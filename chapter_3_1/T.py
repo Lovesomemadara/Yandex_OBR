@@ -1,9 +1,8 @@
 tokens: list[str] = input().split()
 
-uno: list[str] = ['~', '#', '!']
-duo: list[str] = ['+', '-', '*', '/']
-trio: list[str] = ['@']
-operators: list[str] = uno + duo + trio
+uno: str = '~#!'
+duo: str = '+-*/'
+trio: str = '@'
 
 stack: list[int] = []
 
@@ -38,11 +37,9 @@ while tokens:
         a: int = stack.pop()
         b: int = stack.pop()
         c: int = stack.pop()
-        match token:
-            case '@':
-                stack.append(b)
-                stack.append(a)
-                stack.append(c)
+        stack.append(b)
+        stack.append(a)
+        stack.append(c)
     else:
         stack.append(int(token))
 
