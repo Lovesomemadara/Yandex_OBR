@@ -1,1 +1,1 @@
-print([int(x * x) for x in range(int(input()), int(input()) + 1)])
+[x * x for x in range(a, b + 1)]
