@@ -12,7 +12,6 @@ n: int = int(input())
 data: set[str] = set()
 for _ in range(n):
     line: set[str] = set(input().split())
-    print(line)
     data.update(line)
 
 print(*data, sep="\n")
