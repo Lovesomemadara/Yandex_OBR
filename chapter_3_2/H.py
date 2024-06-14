@@ -1,17 +1,15 @@
 n: int = int(input())
 
 surname_porridge: dict[str, str] = {}
-
 for _ in range(n):
-    child: list[str] = input().split()
-    surname_porridge[child[0]] = child[1]
+    child, *porridge = input().split()
+    surname_porridge[child] = porridge
 
-wanted_porridge: str = input()
 like_porridge: list[str] = []
-for item in surname_porridge.items():
-    surname, porridge = item
-    if wanted_porridge == porridge:
-        like_porridge.append(surname)
+wanted_porridge: str = input()
+for child, porridge in surname_porridge.items():
+    if wanted_porridge in porridge:
+        like_porridge.append(child)
 
 if not like_porridge:
     print('Таких нет')
