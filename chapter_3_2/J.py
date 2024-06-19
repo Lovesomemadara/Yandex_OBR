@@ -32,16 +32,13 @@ transliterator: dict[str, str] = {
     'Я': 'IA'
 }
 
-trans_frase: str = ''
-for char in input():
-    if char.isalpha():
-        if char.upper() not in transliterator:
-            trans_frase += ''
-        else:
-            if char.isupper():
-                trans_frase += transliterator.get(char.upper(), char).capitalize()
-            else:
-                trans_frase += transliterator.get(char.upper(), char).lower()
-    else:
-        trans_frase += char
-print(trans_frase)
+# trans_frase: str = ''
+# for char in input():
+#     if char.isalpha():
+#         if char.isupper():
+#             trans_frase += transliterator.get(char, '').capitalize()
+#         else:
+#             trans_frase += transliterator.get(char.upper(), '').lower()
+#     else:
+#         trans_frase += char
+# print(trans_frase)

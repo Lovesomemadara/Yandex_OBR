@@ -5,8 +5,10 @@ while True:
         break
     for item in line:
         if item not in objects:
-            objects[item] = 0
-        objects[item] += 1
+            objects[item] = 1
+        else:
+            objects[item] += 1
+        # objects[item] = objects.get(item, 0) + 1
 
 for item, count in objects.items():
     print(f'{item} {count}')
