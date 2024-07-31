@@ -63,17 +63,41 @@ fruits: list[str] = ["Яблоко", "Бананы", "Апельсин", "Ман
 # print(sorted(fruits, key=by_last_letter))
 
 
-def custom_min(data: list | tuple, key: None = None):
-    # TODO:
-    pass
+def custom_min(data: list | tuple, key: Callable = None):
+    minim = data[0]
+    if key is None:
+        for item in data:
+            if item < minim:
+                minim = item
+    else:
+        minim = key(data[0])
+        for item in data:
+            item = key(item)
+            if item < minim:
+                minim = item
+
+    return minim
 
 
-def custom_max(data: list | tuple, key=None):
-    # TODO:
-    pass
+def custom_max(data: list | tuple, key: Callable = None):
+    maxim = data[0]
+    if key is None:
+        for item in data:
+            if item > maxim:
+                maxim = item
+    else:
+        maxim = key(data[0])
+        for item in data:
+            item = key(item)
+            if item > maxim:
+                maxim = item
+
+    return maxim
 
 
 invalid_nums: list[str] = ["101", "9", "-6", "99", "437"]
 
-# print(min(invalid_nums, key=int))
-# print(max(invalid_nums, key=int))
+# print(min(invalid_nums))
+# print(custom_min(invalid_nums))
+print(max(invalid_nums))
+print(custom_max(invalid_nums))
