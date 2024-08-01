@@ -1,6 +1,6 @@
-def make_matrix(size, value=0):
+def make_matrix(size: int, value=0) -> list[list[int]]:
     if isinstance(size, int):
-        size = (size, size)
+        size: tuple[int, int] = (size, size)
     width, height = size
     matrix: list[list[int]] = [
         [value for _ in range(width)] for _ in range(height)
@@ -8,5 +8,4 @@ def make_matrix(size, value=0):
     return matrix
 
 
-# result = make_matrix(3)
-# print(f'result = {result}')
+print(make_matrix(3))

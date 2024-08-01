@@ -1,4 +1,4 @@
-def merge(t1, t2):
+def merge(t1: tuple[int], t2: tuple[int]) -> tuple[int]:
     result: list[int] = []
     i, j = 0, 0
     while i < len(t1) and j < len(t2):
@@ -13,5 +13,4 @@ def merge(t1, t2):
     return tuple(result)
 
 
-# result = merge((1, 2), (3, 4, 5))
-# print(f'result = {result}')
+print(merge((1, 2), (3, 4, 5)))

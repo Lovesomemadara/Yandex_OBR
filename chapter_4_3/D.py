@@ -2,11 +2,12 @@ from typing import Callable
 
 
 def answer(func: Callable):
-    def wrapper(*args, **kwargs):
+    def inner(*args, **kwargs):
         result = f'Результат функции: {func(*args, **kwargs)}'
 
         return result
-    return wrapper
+
+    return inner
 
 
 @answer

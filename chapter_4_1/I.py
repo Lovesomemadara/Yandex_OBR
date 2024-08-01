@@ -1,4 +1,4 @@
-def is_prime(num):
+def is_prime(num: int) -> bool:
     if num <= 1:
         return False
     for i in range(2, int(num ** 0.5) + 1):
@@ -7,5 +7,5 @@ def is_prime(num):
     return True
 
 
-# result = is_prime(1001459)
-# print(f'result = {result}')
+print(is_prime(1001459))
+

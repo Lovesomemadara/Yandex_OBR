@@ -1,4 +1,4 @@
-def recursive_digit_sum(num, res=0):
+def recursive_digit_sum(num: int, res: int = 0) -> int:
     if not num:
         return res
     res += num % 10
@@ -6,5 +6,4 @@ def recursive_digit_sum(num, res=0):
     return recursive_digit_sum(num, res)
 
 
-result = recursive_digit_sum(123)
-print(result)
+print(recursive_digit_sum(123))

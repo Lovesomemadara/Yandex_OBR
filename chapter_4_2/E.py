@@ -1,5 +1,5 @@
-def to_string(*data, sep=' ', end='\n'):
-    return sep.join(map(str, data)) + end
+def to_string(*args, sep=' ', end='\n') -> str:
+    return sep.join(map(str, args)) + end
 
 
 # data = [7, 3, 1, "hello", (1, 2, 3)]

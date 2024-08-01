@@ -1,7 +1,7 @@
 in_stock: dict[str, int] = {'coffee': 0, 'milk': 0, 'cream': 0}
 
 
-def order(*preferences):
+def order(*args) -> str | tuple[str]:
     recipes: dict[str, dict[str, int]] = {
         'Эспрессо': {
             'coffee': 1
@@ -23,7 +23,7 @@ def order(*preferences):
         }
     }
 
-    for drink in preferences:
+    for drink in args:
         if drink in recipes:
             recipe: dict[str, int] = recipes[drink]
             if all(

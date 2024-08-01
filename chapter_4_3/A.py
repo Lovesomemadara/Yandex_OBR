@@ -1,8 +1,7 @@
-def recursive_sum(*nums):
-    if not nums:
+def recursive_sum(*args) -> int:
+    if not args:
         return 0
-    return nums[0] + recursive_sum(*nums[1:])
+    return args[0] + recursive_sum(*args[1:])
 
 
-result = recursive_sum(1, 2, 3)
-print(result)
+print(recursive_sum(1, 2, 3))

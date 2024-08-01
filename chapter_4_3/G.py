@@ -1,6 +1,9 @@
-def same_type(func):
-    def wrapper(*args):
-        types = set(type(arg) for arg in args)
+from typing import Callable
+
+
+def same_type(func: Callable):
+    def inner(*args):
+        types: type[int, float, str] = set(type(arg) for arg in args)
         if len(types) > 1:
             print('Обнаружены различные типы данных')
 
@@ -8,11 +11,11 @@ def same_type(func):
 
         return func(*args)
 
-    return wrapper
+    return inner
 
 
 @same_type
-def a_plus_b(a, b):
+def a_plus_b(a: int, b: int) -> int:
     return a + b
 
 

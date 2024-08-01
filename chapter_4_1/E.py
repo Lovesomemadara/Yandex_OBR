@@ -1,6 +1,5 @@
-def split_numbers(nums):
+def split_numbers(nums: str) -> tuple:
     return tuple(map(int, nums.split()))
 
 
-# result = split_numbers("1 -2 3 -4 5")
-# print(result)
+print(split_numbers('1 -2 3 -4 5'))

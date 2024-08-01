@@ -4,7 +4,7 @@ from typing import Callable
 def result_accumulator(func: Callable):
     results: dict = {}
 
-    def wrapper(*args, method="accumulate", **kwargs):
+    def inner(*args, method="accumulate", **kwargs):
         if method == "accumulate":
             if func not in results:
                 results[func] = []
@@ -14,7 +14,7 @@ def result_accumulator(func: Callable):
 
         elif method == "drop":
             if func in results:
-                res = results[func]
+                res: list[str] = results[func]
                 del results[func]
                 return res
             else:
@@ -22,7 +22,7 @@ def result_accumulator(func: Callable):
         else:
             return func(*args, **kwargs)
 
-    return wrapper
+    return inner
 
 
 @result_accumulator

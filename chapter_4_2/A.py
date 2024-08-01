@@ -1,6 +1,5 @@
-def make_list(length, value=0):
+def make_list(length: int, value=0) -> list[int]:
     return [value] * length
 
 
-# result = make_list(5, 1)
-# print(f'result = {result}')
+print(make_list(5, 1))

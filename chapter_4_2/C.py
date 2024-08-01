@@ -1,18 +1,17 @@
-def gcd(*numbers):
-    if len(numbers) == 1:
-        return numbers[0]
+def gcd(*args) -> tuple | int:
+    if len(args) == 1:
+        return args[0]
 
-    def find_gcd(a, b):
+    def find_gcd(a, b) -> int:
         while b:
             a, b = b, a % b
         return a
 
-    res = numbers[0]
-    for num in numbers[1:]:
+    res: int = args[0]
+    for num in args[1:]:
         res = find_gcd(res, num)
 
     return res
 
 
-# result = gcd(3)
-# print(f'result = {result}')
+print(gcd(36, 48, 156, 100500))

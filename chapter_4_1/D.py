@@ -1,4 +1,4 @@
-def month(num, lang):
+def month(num: int, lang: str) -> str:
     months_ru: list[str] = ['Январь', 'Февраль', 'Март',
                             'Апрель', 'Май', 'Июнь',
                             'Июль', 'Август', 'Сентябрь',
