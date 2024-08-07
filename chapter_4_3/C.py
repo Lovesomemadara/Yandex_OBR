@@ -5,4 +5,5 @@ def make_equation(*args) -> str:
         return f'({make_equation(*args[:-1])}) * x + {args[-1]}'
 
 
-print(make_equation(3, 2, 1))
+if __name__ == '__main__':
+    print(make_equation(3, 2, 1))
