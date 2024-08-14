@@ -1,4 +1,4 @@
-def merge(t1: tuple[int], t2: tuple[int]) -> tuple[int]:
+def merge(t1: tuple[int, ...], t2: tuple[int, ...]) -> tuple[int, ...]:
     result: list[int] = []
     i, j = 0, 0
     while i < len(t1) and j < len(t2):

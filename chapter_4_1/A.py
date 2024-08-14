@@ -1,4 +1,4 @@
-def print_hello(start: str) -> str:
+def print_hello(start: str) -> None:
     print(f"Hello, {start}!")
 
 
