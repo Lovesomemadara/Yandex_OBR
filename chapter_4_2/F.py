@@ -2,6 +2,7 @@ in_stock: dict[str, int] = {'coffee': 0, 'milk': 0, 'cream': 0}
 
 
 def order(*args) -> str | tuple[str]:
+    global in_stock
     recipes: dict[str, dict[str, int]] = {
         'Эспрессо': {
             'coffee': 1

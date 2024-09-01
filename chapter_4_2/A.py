@@ -1,4 +1,4 @@
-def make_list(length: int, value=0) -> list[int]:
+def make_list(length: int, value: int = 0) -> list[int]:
     return [value] * length
 
 

@@ -1,4 +1,4 @@
-def make_matrix(size: int, value=0) -> list[list[int]]:
+def make_matrix(size: int, value: int = 0) -> list[list[int]]:
     if isinstance(size, int):
         size: tuple[int, int] = (size, size)
     width, height = size
